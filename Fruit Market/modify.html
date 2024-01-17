@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="data.js"></script>
+    <link rel="stylesheet" href="./modify.css" />
+    <style>
+      #beyond-limit {
+        display: None;
+      }
+      #behind-limit {
+        display: none;
+      }
+      #beyond-quantity {
+        display: none;
+      }
+      #equal-zero {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="modify-heading">Customize Quantity</h1>
+    <div class="container">
+      <div class="fruit-container">
+        <img
+          class="fruit-image"
+          id="modify-fruit-image"
+          src="https://images.unsplash.com/photo-1595475207225-428b62bda831?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          data-fruit-key="watermelon"
+        />
+      </div>
+      <form action="" class="form">
+        <div class="input-container">
+          <label for="fruit-name">Name : </label>
+          <input
+            type="text"
+            name="fruit-name"
+            id="fruit-name"
+            class="text-input"
+          />
+        </div>
+        <div class="input-container">
+          <label for="fruit-price">Price : </label>
+          <input
+            type="number"
+            name="fruit-price"
+            id="fruit-price"
+            class="text-input"
+            disabled
+          />
+        </div>
+        <div class="input-container" id="quantity-container">
+          <label> Quantity : </label>
+
+          <input
+            type="text"
+            id="fruit-quantity"
+            value="1"
+            class="text-input"
+            id="quantity"
+            readonly
+          />
+          <button class="quantity-modify-button" id="decrease-button">-</button>
+          <button class="quantity-modify-button" id="increase-button">+</button>
+
+          <p class="error-text" id="behind-limit">
+            You cannot go below 0 grams !!!
+          </p>
+          <p class="error-text" id="beyond-quantity">
+            You cannot go beyond the Availability !!!
+          </p>
+          <p class="error-text" id="beyond-limit">
+            You cannot go beyond 3kg !!!
+          </p>
+          <p class="error-text" id="equal-zero">You cannot select 0g !!!</p>
+        </div>
+        <div class="input-container">
+          <label for="fruit-availability" id="available">Availability : </label>
+          <input
+            type="text"
+            name="fruit-availability"
+            id="fruit-availability"
+            class="text-input"
+          />
+        </div>
+
+        <div class="button-container">
+          <button class="select-button" id="select-button">Select</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="modifyjs.js"></script>
+</html>

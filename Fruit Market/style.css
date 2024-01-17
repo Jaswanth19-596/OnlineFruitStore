@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open sans";
+}
+
+body {
+  letter-spacing: -2px;
+  background-color: #ccf4d3;
+  position: relative;
+}
+
+.heading {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #26402b;
+}
+
+.fruit-images-container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 50px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.fruit-container {
+  transition: all 0.5s;
+}
+
+.fruit-container:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.fruit-image {
+  height: 150px;
+  width: 150px;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px #26402b;
+  transition: all 0.5s;
+}
+
+.fruit-image:hover {
+  box-shadow: 0 5px 30px #26402b;
+}
+
+.fruit-name {
+  color: #16291a;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*.cart-icon-container {
+  position: absolute;
+  top: 10;
+  right: 10;
+} */
+
+.cart-icon {
+  font-size: 30px;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  transition: scale 0.3s ease-in-out;
+}
+
+.cart-icon:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.total-price {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  padding: 50px;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .fruit-images-container {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 50px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .fruit-images-container {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 50px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .cart-icon {
+    font-size: 25px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    transition: scale 0.3s ease-in-out;
+  }
+}

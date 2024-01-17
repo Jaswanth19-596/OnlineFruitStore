@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open sans";
+}
+
+body {
+  background-color: #ccf4d3;
+}
+
+.modify-heading {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #26402b;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fruit-images-container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 50px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.fruit-container {
+  transition: all 0.5s;
+}
+
+.fruit-container:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.fruit-image {
+  height: 150px;
+  width: 150px;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px #26402b;
+  transition: all 0.5s;
+}
+
+.fruit-image:hover {
+  box-shadow: 0 5px 30px #26402b;
+}
+
+.form {
+  margin: 30px;
+  padding: 30px;
+  background-color: #94e8a6;
+  border-radius: 10px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.text-input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: None;
+  transition: all 1s;
+  outline: none;
+}
+
+.text-input {
+  font-weight: 500;
+}
+
+.text-input:hover {
+  scale: 1.01;
+}
+
+label {
+  font-weight: 600;
+  color: #313332;
+}
+
+#quantity {
+  width: 80%;
+}
+
+.quantity-modify-button {
+  padding: 2px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.unavailable {
+  cursor: not-allowed;
+  color: white;
+  background-color: red;
+}
+
+.fruit-image {
+  height: 150px;
+  width: 150px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.error-text {
+  font-size: 12px;
+  color: red;
+  font-weight: 500;
+}
+.select-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+}
+.select-button:hover,
+.quantity-modify-button:hover {
+  cursor: pointer;
+  background-color: #94e8a6;
+  border: 1px solid black;
+  scale: 1.1;
+}
+
+@media only screen and (max-width: 600px) {
+  .modify-heading {
+    padding: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #26402b;
+  }
+}
